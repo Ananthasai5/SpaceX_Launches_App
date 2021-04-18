@@ -1,3 +1,50 @@
+<h1 align="center">
+    SpaceX Launch Program
+</h1>
+<p>
+    This is an easy-to-use application, that gives the details of launches performed by SpaceX program. This includes all the details about every launch. User can filter the launches based on his choice using the filters provided in the application.
+  
+####   Technology Stack
+- **Web-App :** ReactJS
+    
+   This app is developed using the best practices like:
+- **Programming Language :** **Typescript**
+- **Styles:** Used **scss** for styling the components
+- **Design Structure:** Followed **Atomic Design Structure**
+- **State Management:** Used **Redux** for managing the state of the application.
+- **Middleware:** Used **Redux saga** as middleware.
+- **Api client:** Used **Axios** for APIs.
+- **Domain Driven Implementation:** Used **Models** and **Repositories** to maintain the business logic in the application
+- All the components are **functional components** and uses **react hooks**.
+- **Server side rendering** using **babel** and **webpack** configuration
+
+Also, attaching the **Lighthouse** performance report taken from chrome dev tools,
+
+<img src="src/assets/Lighthouse Reports/overall-report.png" />
+
+</p>
+
+### Build in web
+
+git clone https://github.com/Ananthasai5/SpaceX_Launches_App
+
+### Running
+
+Move to the directory space-x : cd space-x
+then
+yarn install  
+from inside your project directory (i.e. where package.json is located) will install the dependencies for your app, rather than install it as a module. These will be placed in ./node_modules relative to your package.json file.
+
+### Running application
+
+Run inside project folder:
+yarn start
+If everything is set up correctly, you should see your new app running in your browser shortly.
+Now run npm start to start development server.
+npm start
+
+### That's it!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -38,20 +85,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-
-# SpaceX Launch Program
-
-This app is developed by Pavan Kumar using the following:
-
-## Technology used: ReactJs
-## used Typescript
-## Styles: used scss for styling the components
-## Design Structure: Atomic Design Structure
-## State Management: Redux (state management library)
-## Middleware: Redux saga
-## Api client: Axios
-## Domain Driven Implementation: used Models and Repositories to maintain the business logic in the application
-## All the components are functional components and uses react hooks.
-## Server side rendering using babel and webpack configuration
-
