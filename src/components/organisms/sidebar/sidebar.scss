@@ -1,0 +1,34 @@
+.sidebar-card {
+  color: black;
+  height: min-content;
+  max-width: 230px;
+}
+
+.sidebar-card-content {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  columns: 2;
+
+}
+
+.sidebar-card-heading {
+  font-weight: bold;
+  text-align: left;
+}
+
+.sidebar-card-subheading {
+  text-decoration: underline;
+}
+
+.successful-launch-div {
+  display: flex;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+@media screen and (max-width: 575px) {
+  .sidebar-card {
+    width: 85vw;
+  }
+}

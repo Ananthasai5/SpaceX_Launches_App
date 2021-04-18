@@ -1,0 +1,50 @@
+.programs-page-content {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.no-launches-div{
+  text-align: center;
+  margin: auto;
+}
+
+.card-styles {
+  height: auto;
+  width: 200px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mission-name {
+  color: mediumpurple;
+  font-size: 20px;
+  height: 35px;
+}
+
+.mission-details {
+  font-weight: bold;
+}
+
+.card-image {
+  height: 100px;
+  width: 100px;
+}
+
+.image-div {
+  background-color: lightgray;
+  text-align: center;
+}
+
+.card-content-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 575px) {
+  .card-styles {
+    width: 85vw;
+  }
+}

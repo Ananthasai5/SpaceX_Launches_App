@@ -1,0 +1,27 @@
+.landing-page-div {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 40px
+}
+
+@media screen and (max-width: 700px) {
+  .landing-page-div {
+    display: flex;
+    flex-wrap: wrap;
+    columns: 1;
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .landing-page-div {
+    columns: 2;
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .landing-page-div {
+    columns: 4;
+  }
+}

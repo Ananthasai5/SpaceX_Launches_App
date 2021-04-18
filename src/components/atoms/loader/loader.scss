@@ -1,0 +1,39 @@
+@import "../../../assets//sass/colors.scss";
+@import "../../../assets/sass/paddings.scss";
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes animation {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.loader {
+  margin: 0px auto;
+  width: 64px;
+  height: 64px;
+  background-color: $btnPrimaryBg;
+  border-radius: 50%;
+  animation: animation 0.9s ease-in-out infinite;
+}
+.loading-text {
+  margin-top: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  color: $btnPrimaryText;
+}

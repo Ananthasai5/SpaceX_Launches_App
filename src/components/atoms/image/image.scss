@@ -1,0 +1,14 @@
+.img {
+  max-width: 100%;
+  width: 700px;
+  height: 500px;
+
+  &--clear {
+    filter: none;
+    transition: filter 0.3s ease-out;
+  }
+
+  &--circular {
+    border-radius: 50%;
+  }
+}
