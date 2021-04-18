@@ -21,6 +21,9 @@
 Also, attaching the **Lighthouse** performance report taken from chrome dev tools,
 
 <img src="src/assets/Lighthouse Reports/overall-report.png" />
+<img src="src/assets/Lighthouse Reports/performance-score.png" />
+<img src="src/assets/Lighthouse Reports/accessibility-score.png" />
+<img src="src/assets/Lighthouse Reports/best-practices and seo score.png" />
 
 </p>
 

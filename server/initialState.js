@@ -1,7 +1,7 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { Provider } from "react-redux";
-import { combineReducers } from "redux";
+import { combineReducers, createStore } from "redux";
 import App from "../src/App";
 
 // function InitialRender(initialState) {
