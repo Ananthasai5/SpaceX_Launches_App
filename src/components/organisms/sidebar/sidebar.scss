@@ -1,3 +1,6 @@
+@import "../../../assets//sass/colors.scss";
+@import "../../../assets/sass/paddings.scss";
+
 .sidebar-card {
   color: black;
   height: min-content;
@@ -9,7 +12,14 @@
   flex-wrap: wrap;
   column-gap: 20px;
   columns: 2;
+}
 
+.button-clicked {
+  background-color: green;
+}
+
+.button-unclick {
+  background-color: $btnPrimaryBg;
 }
 
 .sidebar-card-heading {

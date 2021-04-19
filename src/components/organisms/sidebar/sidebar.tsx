@@ -1,31 +1,29 @@
+import React, { useState } from "react";
 import Button, { ButtonType } from "../../atoms/button/button";
 import Card from "../../atoms/card/card";
-import React from "react";
 import {
   launchAndLandOptions,
   successfulLaunchOptions,
   yearOptions,
 } from "./constants";
 import "./sidebar.scss";
+import {
+  handleLaunchAndLandFilter,
+  handleSuccessfulLaunchFilter,
+  handleYearClick,
+} from "./utils";
 
 interface IProps {
   getProgramsByYear: Function;
   getProgramsBySuccessfulLaunch: Function;
   getProgramsBySuccessfulLand: Function;
+  getProgramsData: Function;
 }
 
 export default function Sidebar(props: IProps): React.ReactElement {
-  const handleYearClick = (option) => {
-    props.getProgramsByYear(option);
-  };
-
-  const handleSuccessfulLaunchFilter = (option) => {
-    props.getProgramsBySuccessfulLaunch(option.toLowerCase());
-  };
-
-  const handleLaunchAndLandFilter = (option) => {
-    props.getProgramsBySuccessfulLand(option.toLowerCase());
-  };
+  const [clickedYear, setClickedYear] = useState<Number>(null);
+  const [successfulLaunch, setSuccessfulLaunch] = useState<String>(null);
+  const [successfulLand, setSuccessfulLand] = useState<String>(null);
 
   return (
     <div className="sidebar-div">
@@ -39,7 +37,19 @@ export default function Sidebar(props: IProps): React.ReactElement {
                 type={ButtonType.Primary}
                 id={`${option}-${index}`}
                 key={`${option}-${index}`}
-                onClick={() => handleYearClick(option)}
+                onClick={() => {
+                  clickedYear !== option && setClickedYear(option);
+                  setSuccessfulLaunch(null);
+                  setSuccessfulLand(null);
+                  handleYearClick(
+                    clickedYear !== option ? option : null,
+                    props,
+                    setClickedYear
+                  );
+                }}
+                customClass={
+                  clickedYear === option ? "button-clicked" : "button-unclick"
+                }
               >
                 {option}
               </Button>
@@ -53,7 +63,21 @@ export default function Sidebar(props: IProps): React.ReactElement {
                 type={ButtonType.Primary}
                 id={`${option}-${index}`}
                 key={`${option}-${index}`}
-                onClick={() => handleSuccessfulLaunchFilter(option)}
+                onClick={() => {
+                  successfulLaunch !== option && setSuccessfulLaunch(option);
+                  setClickedYear(null);
+                  setSuccessfulLand(null);
+                  handleSuccessfulLaunchFilter(
+                    successfulLaunch !== option ? option : null,
+                    props,
+                    setSuccessfulLaunch
+                  );
+                }}
+                customClass={
+                  successfulLaunch === option
+                    ? "button-clicked"
+                    : "button-unclick"
+                }
               >
                 {option}
               </Button>
@@ -67,7 +91,22 @@ export default function Sidebar(props: IProps): React.ReactElement {
                 type={ButtonType.Primary}
                 id={`${option}-${index}`}
                 key={`${option}-${index}`}
-                onClick={() => handleLaunchAndLandFilter(option)}
+                // onClick={() => handleLaunchAndLandFilter(option)}
+                onClick={() => {
+                  successfulLand !== option && setSuccessfulLand(option);
+                  setClickedYear(null);
+                  setSuccessfulLaunch(null);
+                  handleLaunchAndLandFilter(
+                    successfulLand !== option ? option : null,
+                    props,
+                    setSuccessfulLand
+                  );
+                }}
+                customClass={
+                  successfulLand === option
+                    ? "button-clicked"
+                    : "button-unclick"
+                }
               >
                 {option}
               </Button>

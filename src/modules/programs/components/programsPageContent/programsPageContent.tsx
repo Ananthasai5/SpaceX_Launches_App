@@ -1,9 +1,8 @@
+import { ProgramDetails } from "models/program";
+import React, { useEffect } from "react";
 import Card from "../../../../components/atoms/card/card";
 import Image from "../../../../components/atoms/image/image";
-import { ProgramDetails } from "models/program";
 import { programInitialState } from "../../reducer/reducer";
-import { resolveConfigFile } from "prettier";
-import React, { useEffect } from "react";
 import "./programsPageContent.scss";
 
 interface IProps {
