@@ -1,13 +1,14 @@
 .programs-page-content {
   color: black;
   display: flex;
+  text-align: center;
   flex-wrap: wrap;
   min-height: 100vh;
 }
 
 .no-launches-div{
-  text-align: center;
-  margin: auto;
+  // text-align: center;
+  margin: auto 30vw auto;
 }
 
 .card-styles {

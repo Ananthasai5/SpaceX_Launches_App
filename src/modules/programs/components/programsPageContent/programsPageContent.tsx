@@ -23,7 +23,9 @@ export default function ProgramsPageContent(props: IProps): React.ReactElement {
   return (
     <div className="programs-page-content">
       {getProgramDetailsData.programs.length === 0 ? (
-        <div className="no-launches-div">No launches</div>
+        <div className="no-launches-div">
+          No launches found for the selection
+        </div>
       ) : (
         getProgramDetailsData.programs !== undefined &&
         getProgramDetailsData.programs.map((option: any, index: any) => {
