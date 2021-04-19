@@ -1,6 +1,6 @@
-import { applyMiddleware, createStore, compose } from "redux";
+import { applyMiddleware, compose, createStore } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
 import createSagaMiddleware from "redux-saga";
-import config from "config/validateEnv";
 import combineReducers from "../store/combineReducers";
 import rootSaga from "../store/saga";
 
@@ -17,13 +17,16 @@ const reduxDevTools =
     : (f) => f;
 
 const store = () => {
-  let store = window.__REDUX_DEVTOOLS_EXTENSION__
-    ? createStore(
-        combineReducers,
-        compose(applyMiddleware(sagaMiddleware), reduxDevTools)
-      )
-    : createStore(compose(applyMiddleware(sagaMiddleware)));
-
+  // let store = window.__REDUX_DEVTOOLS_EXTENSION__
+  //   ? createStore(
+  //       combineReducers,
+  //       composeWithDevTools(applyMiddleware(sagaMiddleware), reduxDevTools)
+  //     )
+  //   : createStore(compose(applyMiddleware(sagaMiddleware)));
+  let store = createStore(
+    combineReducers,
+    composeWithDevTools(applyMiddleware(sagaMiddleware))
+  );
   sagaMiddleware.run(rootSaga);
   return store;
 };
